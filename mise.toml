@@ -1,0 +1,27 @@
+[tools]
+node = "22.13.1"
+pnpm = "10.10.0"
+
+[env]
+PORT="3000"
+
+[tasks.setup]
+run = "pnpm install"
+
+[tasks.dev]
+run = "pnpm dev"
+
+[tasks.build]
+run = "pnpm build"
+
+[tasks.start]
+run = [
+  "pnpm build",
+  "pnpm start"
+]
+
+[tasks.check]
+run = "pnpm check"
+
+[tasks.format]
+run = "pnpm format"
